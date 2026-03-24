@@ -1,5 +1,4 @@
 # Python
-__pycache__/
 *.py[cod]
 *.pyo
 *.pyd
@@ -16,12 +15,7 @@ venv/
 env/
 .env/
 
-# Model weights (large binary file - generate with train.py)
-backend/fruit_model.pth
-*.pth
-*.pt
-
-# Dataset (large - download with scripts/download_dataset.py)
+# Dataset (too large for GitHub ~700MB)
 dataset/
 
 # IDE
