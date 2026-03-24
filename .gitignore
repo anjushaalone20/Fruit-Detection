@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.spec
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Model weights (large binary file - generate with train.py)
+backend/fruit_model.pth
+*.pth
+*.pt
+
+# Dataset (large - download with scripts/download_dataset.py)
+dataset/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

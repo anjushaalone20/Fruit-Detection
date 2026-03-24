@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit AI Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-apple-whole"></i>
+                <h1>Fruit AI</h1>
+            </div>
+            <p>Upload a fruit or vegetable image to classify it using advanced Machine Learning.</p>
+        </header>
+
+        <main>
+            <div id="upload-zone" class="upload-zone">
+                <input type="file" id="file-input" accept="image/jpeg, image/png, image/jpg" hidden>
+                <div class="upload-content">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <h3>Drag & Drop your image here</h3>
+                    <p>or</p>
+                    <button class="btn-primary" id="browse-btn">Browse Files</button>
+                    <span class="file-hint">Supports: JPG, PNG, JPEG</span>
+                </div>
+            </div>
+
+            <div id="preview-section" class="preview-section hidden">
+                <div class="image-container">
+                    <img id="preview-image" src="" alt="Preview">
+                </div>
+                
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing image...</p>
+                </div>
+
+                <div id="result" class="result-card hidden">
+                    <div class="result-header">
+                        <h2>Classification Result</h2>
+                    </div>
+                    <div class="result-details">
+                        <div class="fruit-name">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span id="predicted-class">Apple Granny Smith</span>
+                        </div>
+                        <div class="confidence">
+                            <span class="conf-label">Confidence:</span>
+                            <span id="predicted-confidence">98.5%</span>
+                            <div class="progress-bar">
+                                <div id="confidence-bar" class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-secondary mt-1rem" id="reset-btn">
+                    <i class="fa-solid fa-rotate-right"></i> Classify Another
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by PyTorch & FastAPI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
